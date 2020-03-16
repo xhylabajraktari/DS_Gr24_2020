@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class decoder_tap {
 
 	private String original;
-	private String mcode;
+	private String tcode;
 	private char[] regular;
-	private char[] morse;
+	private char[] tap;
 
 	decoder_tap(String m){original=m;}
 
@@ -17,6 +17,7 @@ public class decoder_tap {
 				switch (x) 
 				{ 
 				case". .":
+					
 					return "a";
 				case". ..": 
 					return"b";
@@ -77,10 +78,10 @@ public class decoder_tap {
 			public String getMorseCode()
 			{ 
 				 
-				mcode="";
+				tcode="";
 				for (int i = 0;i<original.length(); i++) 
-					mcode+=decoder(original.substring(i));
-				return mcode;
+					tcode+=decoder(original.substring(i));
+				return tcode;
 				
 			} 
 			public String getOriginal() {
