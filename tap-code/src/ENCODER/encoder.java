@@ -86,7 +86,6 @@ encoder(String m)
 			return tcode;
 		} 
 		
-		//Metoda per shenimin ne console.
 		public String getOriginal() {
 			return original;
 		}

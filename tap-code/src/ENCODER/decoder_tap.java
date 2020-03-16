@@ -10,12 +10,14 @@ public class decoder_tap {
 	private char[] tap;
 
 	decoder_tap(String m){original=m;}
+	//Funksioni per me dekodu germat e alfabetit ne tap-code.
 
 			static String decoder(String x) 
 			{ 
 			
 				switch (x) 
 				{ 
+				//Konvertimi i matrices 5x5
 				case". .":
 					
 					return "a";
@@ -75,10 +77,12 @@ public class decoder_tap {
 			} 
 			
 			
+			//Konvertimi i tekstit
 			public String getMorseCode()
 			{ 
 				 
 				tcode="";
+				//Paraqitja e gjdo pike qe shenohet ne console.
 				for (int i = 0;i<original.length(); i++) 
 					tcode+=decoder(original.substring(i));
 				return tcode;
