@@ -78,7 +78,7 @@ public class decoder_tap {
 			
 			
 			//Konvertimi i tekstit
-			public String getMorseCode()
+			public String getTapCode()
 			{ 
 				 
 				tcode="";
@@ -99,7 +99,7 @@ public class decoder_tap {
 				Scanner input=new Scanner(System.in);
 				String original=input.nextLine();
 				decoder_tap message=new decoder_tap(original);
-				System.out.println("Teksti '"+message.getOriginal()+"' ne tap code eshte:\n" +message.getMorseCode());
+				System.out.println("Teksti '"+message.getOriginal()+"' ne tap code eshte:\n" +message.getTapCode());
 			}
 		
 
