@@ -32,115 +32,115 @@ public class Tap_code {
 		    //Funksioni per me dekodu germat e alfabetit ne tap-code.
 		    public static String encode (String toEncode)
 		    {
-		        String morse = toEncode;
+		        String tap = toEncode;
 		      //tabela matricore 5x5 e tap-code.
 		        if (toEncode.equalsIgnoreCase("a"))
-		            morse = ". .";
+		            tap = ". .";
 		        if (toEncode.equalsIgnoreCase("b"))
-		            morse = ". ..";
+		            tap = ". ..";
 		        if (toEncode.equalsIgnoreCase("c"))
-		            morse = ". ...";
+		            tap = ". ...";
 		        if (toEncode.equalsIgnoreCase("d"))
-		            morse = ". ....";
+		            tap = ". ....";
 		        if (toEncode.equalsIgnoreCase("e"))
-		            morse = ". .....";
+		            tap = ". .....";
 		        if (toEncode.equalsIgnoreCase("f"))
-		            morse = ".. .";
+		            tap = ".. .";
 		        if (toEncode.equalsIgnoreCase("g"))
-		            morse = ".. ..";
+		            tap = ".. ..";
 		        if (toEncode.equalsIgnoreCase("h"))
-		            morse = ".. ...";
+		            tap = ".. ...";
 		        if (toEncode.equalsIgnoreCase("i"))
-		            morse = ".. ....";
+		            tap = ".. ....";
 		        if (toEncode.equalsIgnoreCase("j"))
-		            morse = ".. .....";
+		            tap = ".. .....";
 		        if (toEncode.equalsIgnoreCase("l"))
-		            morse = "... .";
+		            tap = "... .";
 		        if (toEncode.equalsIgnoreCase("m"))
-		            morse = "... ..";
+		            tap = "... ..";
 		        if (toEncode.equalsIgnoreCase("n"))
-		            morse = "... ...";
+		            tap = "... ...";
 		        if (toEncode.equalsIgnoreCase("o"))
-		            morse = "... ....";
+		            tap = "... ....";
 		        if (toEncode.equalsIgnoreCase("p"))
-		            morse = "... .....";
+		            tap = "... .....";
 		        if (toEncode.equalsIgnoreCase("q"))
-		            morse = ".... .";
+		            tap = ".... .";
 		        if (toEncode.equalsIgnoreCase("r"))
-		            morse = ".... ..";
+		            tap = ".... ..";
 		        if (toEncode.equalsIgnoreCase("s"))
-		            morse = ".... ...";
+		            tap = ".... ...";
 		        if (toEncode.equalsIgnoreCase("t"))
-		            morse = ".... ....";
+		            tap = ".... ....";
 		        if (toEncode.equalsIgnoreCase("u"))
-		            morse = ".... .....";
+		            tap = ".... .....";
 		        if (toEncode.equalsIgnoreCase("v"))
-		            morse = "..... .";
+		            tap = "..... .";
 		        if (toEncode.equalsIgnoreCase("w"))
-		            morse = "..... ..";
+		            tap = "..... ..";
 		        if (toEncode.equalsIgnoreCase("x"))
-		            morse = "..... ...";
+		            tap = "..... ...";
 		        if (toEncode.equalsIgnoreCase("y"))
-		            morse = "..... ....";
+		            tap = "..... ....";
 		        if (toEncode.equalsIgnoreCase("z"))
-		            morse = "..... .....";
-		        return morse;}
+		            tap = "..... .....";
+		        return tap;}
 		    //Funksioni per me dekodu germat e alfabetit ne tap-code.
 		    public static String decode (String toEncode) {
-		        String morse = toEncode;
+		        String tap = toEncode;
 
 		        if (toEncode.equalsIgnoreCase(". ."))
-		            morse = "a";
+		            tap = "a";
 		        if (toEncode.equalsIgnoreCase(". .."))
-		            morse = "b";
+		            tap = "b";
 		        if (toEncode.equalsIgnoreCase(". ..."))
-		            morse = "c";
+		            tap = "c";
 		        if (toEncode.equalsIgnoreCase(". ...."))
-		            morse = "d";
+		            tap = "d";
 		        if (toEncode.equalsIgnoreCase(". ....."))
-		            morse = "e";
+		            tap = "e";
 		        if (toEncode.equalsIgnoreCase(".. ."))
-		            morse = "f";
+		            tap = "f";
 		        if (toEncode.equalsIgnoreCase(".. .."))
-		            morse = "g";
+		            tap = "g";
 		        if (toEncode.equalsIgnoreCase(".. ..."))
-		            morse = "h";
+		            tap = "h";
 		        if (toEncode.equalsIgnoreCase(".. ...."))
-		            morse = "i";
+		            tap = "i";
 		        if (toEncode.equalsIgnoreCase(".. ....."))
-		            morse = "j";
+		            tap = "j";
 		        if (toEncode.equalsIgnoreCase("... ."))
-		            morse = "l";
+		            tap = "l";
 		        if (toEncode.equalsIgnoreCase("... .."))
-		            morse = "m";
+		            tap = "m";
 		        if (toEncode.equalsIgnoreCase("... ..."))
-		            morse = "n";
+		            tap = "n";
 		        if (toEncode.equalsIgnoreCase("... ...."))
-		            morse = "o";
+		            tap = "o";
 		        if (toEncode.equalsIgnoreCase("... ....."))
-		            morse = "p";
+		            tap = "p";
 		        if (toEncode.equalsIgnoreCase(".... ."))
-		            morse = "q";
+		            tap = "q";
 		        if (toEncode.equalsIgnoreCase(".... .."))
-		            morse = "r";
+		            tap = "r";
 		        if (toEncode.equalsIgnoreCase(".... ..."))
-		            morse = "s";
+		            tap = "s";
 		        if (toEncode.equalsIgnoreCase(".... ...."))
-		            morse = "t";
+		            tap = "t";
 		        if (toEncode.equalsIgnoreCase(".... ....."))
-		            morse = "u";
+		            tap = "u";
 		        if (toEncode.equalsIgnoreCase("..... ."))
-		            morse = "v";
+		            tap = "v";
 		        if (toEncode.equalsIgnoreCase("..... .."))
-		            morse = "w";
+		            tap = "w";
 		        if (toEncode.equalsIgnoreCase("..... ..."))
-		            morse = "x";
+		            tap = "x";
 		        if (toEncode.equalsIgnoreCase("..... ...."))
-		            morse = "y";
+		            tap = "y";
 		        if (toEncode.equalsIgnoreCase("..... ....."))
-		            morse = "z";
+		            tap = "z";
 		       
-		        	return morse;}
+		        	return tap;}
 		    public static String stringToTap( String text )
 		    {
 
@@ -181,12 +181,12 @@ public class Tap_code {
 		       String newEnglish = ""; //Deklaron String per newEnglish
 		       String selectedEnglish; //Deklaron String per selectedEnglish
 		       String convertedEnglish; //Deklaron String per convertedEnglish
-		       String[] morseChars = text.split(" ");
+		       String[] tapChars = text.split(" ");
 		     //Paraqitja e gjdo karakteri qe jep shfrytezuesi .
-		       for (int i = 0; i < morseChars.length; i++)
-		       {
-		           //Select the next morse character
-		           selectedEnglish = morseChars[i];
+		       for (int i = 0; i < tapChars.length; i++)
+		       {	
+		           //Selekton tap karakterin e ardhshem 
+		           selectedEnglish = tapChars[i];
 		           boolean endsWithWordSeparator = selectedEnglish.endsWith("|");
 		           if(endsWithWordSeparator) selectedEnglish = selectedEnglish.substring(0, selectedEnglish.length() - 1);
 		           // Konverton ne String
