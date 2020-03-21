@@ -53,6 +53,8 @@ public class Main {
 
         }
         System.out.println(sb);
-
+//A night before the movie theater allowed patrol to buy tickets early //as a way to reserve seats for a later showing.
+//2,12,18,12,17
+	        
     }
 }

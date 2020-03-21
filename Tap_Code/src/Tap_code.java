@@ -9,15 +9,15 @@ public class Tap_code {
 		    {
 		        Scanner input = new Scanner( System.in );
 		        System.out.print( "Deshironi te konvertoni nga Anglisht ne Tap (po ose jo)? " );
-		        String answer = input.nextLine();
-		        if( answer.equals( "po" ) )
+		        String answer = input.nextLine();//Pjesa ku lejohet qe klienti te jep pergjigjje
+		        if( answer.equals( "po" ) )//Unaza e cila analizon pergjigjjet e klientit dhe ne baze saj e lidh ate me pjesen e caktuar te projktit
 		        {
 		        System.out.println( "Ju lutem shenoni tekstin qe deshironi ta konvertoni ne Tap: " );
 		        String english = input.nextLine();
 		        System.out.println( stringToTap( english ) );
 		        }
-
-		        if (answer.equalsIgnoreCase( "jo" ) )
+			
+		        if (answer.equalsIgnoreCase( "jo" ) )//Unaza e cila analizon pergjigjjet e klientit dhe ne baze saj e lidh ate me pjesen e caktuar te projktit
 		        {
 		            System.out.print( "Tap ne Anglisht? " );
 		            String answer2 = input.nextLine();
