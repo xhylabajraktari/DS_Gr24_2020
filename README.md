@@ -10,5 +10,5 @@ Komanda 3 : BEALE
 
 
 
-Referencat :  https://www.geeksforgeeks.org/
+Referencat :  https://www.geeksforgeeks.org/ ,
               https://exercism.io/
