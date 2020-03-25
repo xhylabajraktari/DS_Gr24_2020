@@ -6,7 +6,7 @@ public class ds {
     public static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
-   
+       menu();
         int ch = in.nextInt();
         System.out.print("\n");
         while (ch != 0) {
@@ -19,7 +19,6 @@ public class ds {
                     System.out.print("---------------------\n\n");
                     tap_code t=new tap_code();
                     t.main(args);
-                  
                     
                     break;
                    
