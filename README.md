@@ -22,7 +22,7 @@ Referencat :  https://www.geeksforgeeks.org/ ,
 Tek folderi Teorike , jane te shpjeguara se si funksionon secila komande .             
 
 
-Tek folderi Images , jane rezultatet e komandave nga vegla qe kemi punuar eclipce .
+Tek folderi Images , jane rezultatet e komandave nga vegla qe kemi punuar eclipse .
 
 
 Tek folderi cmd , jane rezultatet e komandave nga cmd.
