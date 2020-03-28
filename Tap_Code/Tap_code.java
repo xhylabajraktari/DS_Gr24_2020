@@ -1,6 +1,6 @@
 
 	package Llogaritja;
-	import java.util.Scanner; //importimi i paketes
+	import java.util.Scanner; 
 	public class tap_code {
 
 		
