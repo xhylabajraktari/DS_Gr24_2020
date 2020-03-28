@@ -1,4 +1,4 @@
-public class Tap_code {
+
 	package Llogaritja;
 	import java.util.Scanner; //importimi i paketes
 	public class tap_code {
