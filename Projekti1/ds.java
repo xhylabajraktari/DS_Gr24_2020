@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//importimi i librarise
 
 public class ds {
 
@@ -9,6 +9,7 @@ public class ds {
        menu();
         int ch = in.nextInt();
         System.out.print("\n");
+        //Perderisa inputi i klientit eshte i ndryshem nga zero 
         while (ch != 0) {
             switch (ch) {
    

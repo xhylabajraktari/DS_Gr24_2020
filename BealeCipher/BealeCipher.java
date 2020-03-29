@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -32,7 +31,7 @@ public class Main {
         System.out.println("Percakto fjaline ne baze te pozites nga libri.txt : ");
      
         String cipher = sc.nextLine().trim();
-
+//Metoda Integer.parseInt () përdoret kryesisht për të analizuar një argument të metodës String në një objekt
         for (int i = 0; i < cipher.length(); i++) {
             String acheck = String.valueOf(cipher.charAt(i));
             if (acheck.equals(",")) {
