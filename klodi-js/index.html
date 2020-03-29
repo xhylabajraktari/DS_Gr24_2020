@@ -1,0 +1,86 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Projekti</title>
+    <script src="tap_code.js"></script>
+    <script src="rail_fence.js"></script>
+    <script src="bcipher.js"></script>
+    <style>
+        html,body {
+            font-family: 'Open Sans',sans-serif;
+        }
+        .main {
+            max-width: 960px;
+            margin: 15px auto;
+            padding: 15px;
+            box-shadow: 1px 1px 1px #1d1d1d;
+            border: 1px solid #1d1d1d;
+        }
+        hr {
+            border-color: #1d1d1d;
+        }
+        .half {
+            margin: 0;
+            padding: 0;
+            width: 49%;
+            display: inline-block;
+        }
+        textarea {
+            width: 90%;
+        }
+    </style>
+</head>
+
+    <div class="main">
+        <h1>Projekti</h1>
+        <hr>
+        <h2>Tap Code</h2>
+        <div class="half">
+            <h3>Encode</h3>
+            <textarea name="tap_encode" onkeyup="tap_encode()" id="tap_code_e" cols="30" rows="10"></textarea>
+            <p>Result: <span id="tap_encode"></span></p>
+        </div>
+        <div class="half">
+            <h3>Decode</h3>
+            <textarea name="tap_decode" onkeyup="tap_decode()" id="tap_code_d" cols="30" rows="10"></textarea>
+            <p>Result: <span id="tap_decode"></span></p>
+        </div>
+        <h2>Rail Fence</h2>
+        <p>Rails</p>
+        <input type="number" id="r_number" value="3" min="2">
+        <br>
+        <div class="half">
+            <h3>Encode</h3>
+            <textarea name="rail_encode" onkeyup="rail_encode()" id="rail_code_e" cols="30" rows="10"></textarea>
+            <p>Result: <span id="rail_encode"></span></p>
+        </div>
+        <div class="half">
+            <h3>Decode</h3>
+            <textarea name="rail_decode" onkeyup="rail_decode()" id="rail_code_d" cols="30" rows="10"></textarea>
+            <p>Result: <span id="rail_decode"></span></p>
+        </div>
+        <h2>Beale Cipher</h2>
+        <h3>Encode</h3>
+        <div class="half">
+            <h3>Text</h3>
+            <textarea name="bcipher_text_e" onkeyup="bcipher_encode()" id="bcipher_text_et" cols="30" rows="10"></textarea>
+        </div>
+        <div class="half">
+            <h3>Book</h3>
+            <textarea name="bcipher_book_e" onkeyup="bcipher_encode()" id="bcipher_text_eb" cols="30" rows="10"></textarea>
+        </div>
+        <p>Result: <span id="bcipher_encode"></span></p>
+        <h3>Decode</h3>
+        <div class="half">
+            <h3>Text</h3>
+            <textarea name="bcipher_text_d" onkeyup="bcipher_decode()" id="bcipher_text_dt" cols="30" rows="10"></textarea>
+        </div>
+        <div class="half">
+            <h3>Book</h3>
+            <textarea name="bcipher_book_d" onkeyup="bcipher_decode()" id="bcipher_text_db" cols="30" rows="10"></textarea>
+        </div>
+        <p>Result: <span id="bcipher_decode"></span></p>
+
+    </div>
+
+</html>
