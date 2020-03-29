@@ -21,4 +21,4 @@ Referencat :  https://www.geeksforgeeks.org/ ,
 
 Tek folderi Teorike , jane te shpjeguara se si funksionon secila komande .             
 
-
+Me Java nuk eshte arrit me u kompletu detyra ndersa ne Web eshte funksional komplet.
