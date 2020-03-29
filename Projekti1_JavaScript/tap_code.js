@@ -17,7 +17,7 @@ function tap_decode() {
     }
     document.getElementById('tap_decode').innerHTML = temp;
 }
-
+//Funksioni per me dekodu germat e alfabetit ne tap-code.
 function tap_encode_switch(string){
     switch(string){
         case 'a':
@@ -107,7 +107,7 @@ function tap_encode_switch(string){
 
     }
 }
-
+//Funksioni per me dekodu germat e alfabetit ne tap-code.
 function tap_decode_switch(text){
     switch(text){
         case '. .':
