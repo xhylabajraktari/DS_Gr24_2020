@@ -9,6 +9,15 @@ namespace ds
     {
         static void Main(string[] args)
         {
+            if (args.Length == 0)
+            {
+                Console.WriteLine("Miresevini te Siguria!");
+                Console.WriteLine("Per te ekzekutua komanden create user shtyp : ds create-user <name>");
+                Console.WriteLine("Per te ekzekutua komanden delete user shtyp : ds delete-user <name>");
+                Console.WriteLine("Per te ekzekutua komanden eport key  shtyp  : ds export-key <public|private><name>[path]");
+                Console.WriteLine("Per te ekzekutua komanden import key shtyp  : ds import-key <name><path>");
+                Environment.Exit(1);
+            }
             if (args[0] == "create-user") {
 
                 if (!System.IO.File.Exists("../../../../keys//" + args[1] + ".xml")) {
@@ -150,15 +159,7 @@ namespace ds
                 }
             }
 
-            if (args.Length == 0)
-            {
-                Console.WriteLine("Miresevini te Siguria!");
-                Console.WriteLine("Per te ekzekutua komanden create user shtyp : ds create-user <name>");
-                Console.WriteLine("Per te ekzekutua komanden delete user shtyp : ds delete-user <name>");
-                Console.WriteLine("Per te ekzekutua komanden eport key  shtyp  : ds export-key <public|private><name>[path]");
-                Console.WriteLine("Per te ekzekutua komanden import key shtyp  : ds import-key <name><path>");
-                Environment.Exit(1);
-            }
+           
         }
     }
 }
