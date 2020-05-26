@@ -60,7 +60,7 @@ namespace ds
                 }
                 else if (!System.IO.File.Exists("../../../../keys/" + args[1] + ".xml") && System.IO.File.Exists("../../../../keys/" + args[1] + ".pub.xml")) {
                     
-                    System.IO.File.Delete("../../../../keys/" + args[1] + "pub.xml");
+                    System.IO.File.Delete("../../../../keys/" + args[1] + ".pub.xml");
                     Console.WriteLine("Qelsi publik " + args[1] + " u fshi nga dir keys");
                 }
                 else {
