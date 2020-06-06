@@ -21,10 +21,12 @@ function bcipher_decode() {
     var book = document.getElementById("bcipher_text_db").value;
     var book_array = book.split(' ');
     var text_n = text.split(' ');
-    var temp = [];
+    var temp = [];//I JA OSHT TEXT DMTH NUMRAT
     for(var i = 0;i < text_n.length; i++){
         var x = parseInt(text_n[i]) - 1;
         temp += book_array[x].charAt(0);
     }
     document.getElementById('bcipher_decode').innerHTML = temp;
 }
+//A night before the movie theater allowed patrol to buy tickets early //as a way to reserve seats for a later showing.
+//2,12,18,12,17

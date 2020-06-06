@@ -1,3 +1,0 @@
-Tap-code është përdorur nga të burgosurit në burg për të komunikuar me njëri-tjetrin. Metoda e komunikimit zakonisht është "përgjuar". Tap-code është një kod shumë i thjeshtë, nuk ka për qëllim të shmangë përgjimet, pasi mesazhet dërgohen në sqarim.
-Raportohet se është shpikur nga katër të burgosur në Vietnam dhe ndonjëherë quhet "Kodi Smitty" pas Kapitenit Carlyle ("Smitty") Harris. Harris kujtoi një instruktor të Forcave Ajrore i cili i kishte treguar një kod të bazuar në një matricë alfabeti pesë-nga-pesë.
-Komunikimi u krye duke shtypur dy numra. E para caktoi rreshtin horizontal dhe e dyta caktoi rreshtin vertikal. Shkronja "X" u përdor për të prishur fjalitë dhe shkronja "C" zëvendësoi shkronjën "K".

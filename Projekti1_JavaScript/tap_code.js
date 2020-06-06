@@ -3,17 +3,17 @@ function tap_encode() {
     var temp = [];
     for(var i = 0; i < arg.length; i++ ) {
         temp += tap_encode_switch(arg[i]);
-        temp += " ";
+        temp += " ";//space mes shkronjave
     }
-    document.getElementById('tap_encode').innerHTML = temp;
+    document.getElementById('tap_encode').innerHTML = temp;// inner e lidh qit js po html 
 }
 
 function tap_decode() {
     var arg = document.getElementById("tap_code_d").value;
-    var argArr = arg.split(/(\s+)/).filter( function(e) { return e.trim().length > 0; } ); // split by space
+    var argArr = arg.split(/(\s+)/).filter( function(e) { return e.trim().length > 0; } ); // split by space mi hek hapsirat se osht funksion 
     var temp = [];
-    for(var i = 1; i < arg.length; i+=2) {
-        temp += tap_decode_switch((argArr[i - 1] + " " + argArr[i])); // read by two
+    for(var i = 0; i < arg.length; i+=2) {// osht +2 se i ki ka dy kolona 
+        temp += tap_decode_switch((argArr[i]+" " +argArr[i+1])); // read by two e qaj -1 osht pershkak 
     }
     document.getElementById('tap_decode').innerHTML = temp;
 }

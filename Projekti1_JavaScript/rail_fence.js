@@ -1,6 +1,6 @@
 function rail_encode() {
     var arg = document.getElementById("rail_code_e").value.replace(/\s/g, '').toUpperCase(); // replace remove spaces
-    var rails = document.getElementById("r_number").value;
+    var rails = document.getElementById("r_number").value;//document eshte objekti e value eshte vlera e objektit
     var temp = [];
 
     while(arg.length % rails !== 0) {
@@ -9,7 +9,7 @@ function rail_encode() {
 
     var col = arg.length / rails; // colonat
     var counter = 0; // counteri
-    for(var i = 1;i <= rails; i++) { // colonat
+    for(var i = 1;i <= rails; i++) { // colon
         for(var j = 0;j < col; j++) { // rreshti
             temp += arg[counter];
             counter += parseInt(rails);
