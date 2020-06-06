@@ -13,40 +13,41 @@ namespace ds
         {  
             //Hash Password  
             
-            byte[] salt;
-            new RNGCryptoServiceProvider().GetBytes(salt = new byte[16]);
-            
-            var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000);
-            byte[] hash = pbkdf2.GetBytes(20);
-            
-            byte[] hashBytes = new byte[36];
-            Array.Copy(salt, 0, hashBytes, 0, 16);
-            Array.Copy(hash, 0, hashBytes, 16, 20);
-            
-            string savedPasswordHash = Convert.ToBase64String(hashBytes);
+            int RandomSalt = new Random().Next(100000, 1000000);
+            string salt = RandomSalt.ToString();
+           
+            SHA1CryptoServiceProvider objHash = new SHA1CryptoServiceProvider();
+            string saltPassword = salt + password;
+            byte[] byteSaltPassword = Encoding.UTF8.GetBytes(saltPassword);
+            byte[] byteHashSaltedPassword = objHash.ComputeHash(byteSaltPassword);
+
+            string savedPasswordHash = Convert.ToBase64String(byteHashSaltedPassword);
+            string savedSaltHash = salt;
+
 
             try  
-            {  
-                Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
-                
+            {
                 //Te database ja jep databazen qe e ke kriju ti edhe te password ja jep passworidn e localhost
-                // nMunet qe local host mos me pas password e len zbrazet
+                // Munet qe local host mos me pas password e len zbrazet
                 string MyConnection2 = "datasource=localhost;database=keys;username=root;password=;CharSet=utf8";
-                
-                 
-                String Query = "INSERT INTO users VALUES" + "('" + userpath + "','" + savedPasswordHash + "')";               
+
+                String Query = "INSERT INTO shfrytezuesit VALUES" + "('" + userpath + "','" + savedPasswordHash + "','" + savedSaltHash + "')";               
                
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);  
                
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);  
-                MySqlDataReader MyReader2;  
+                MySqlDataReader MyReader2; 
+              
                 MyConn2.Open();  
+                user(userpath);
                 MyReader2 = MyCommand2.ExecuteReader();     // Here our query will be executed and data saved into the database.  
                 while (MyReader2.Read())  
-                {                     
+                {
                 }  
                 MyConn2.Close();  
+               
                 Console.WriteLine("Eshte krijuar shfrytezuesi " + userpath);
+                
             }  
             catch (Exception ex)  
             {   
@@ -78,7 +79,7 @@ namespace ds
                 Console.WriteLine("Qelsi privat " + filepath + " u ruajt ne dir keys");
             }
             else {
-                Console.WriteLine("Celsi " + filepath + " ekziston");
+                throw new Exception("Celsi " + filepath + " ekziston");
             }
         }
         

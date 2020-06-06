@@ -48,7 +48,7 @@ namespace ds
                 // nMunet qe local host mos me pas password e len zbrazet
                 string MyConnection2 = "datasource=localhost;database=keys;username=root;password=;CharSet=utf8";
                 
-                String Query = "DELETE FROM users WHERE USER=" + "'" + userpath + "';";  
+                String Query = "DELETE FROM shfrytezuesit WHERE perdoruesi=" + "'" + userpath + "';";  
                             
                
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);  
