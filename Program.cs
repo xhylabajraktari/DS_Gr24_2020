@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Security.Cryptography;
+using System.Text.RegularExpressions;
 using System.Xml;
 
 namespace ds
@@ -10,16 +11,31 @@ namespace ds
         {
             KrijoUser U = new KrijoUser();
             FshiUser F = new FshiUser();
+            write_message w = new write_message();
+            read_message r = new read_message();
+            JWT_token J = new JWT_token();
+
 
             if (args.Length == 0)
             {
                 Console.WriteLine("Miresevini te Siguria!");
                 Console.WriteLine("Per te ekzekutuar komanden create user shtyp : ds create-user <name>");
                 Console.WriteLine("Per te ekzekutuar komanden delete user shtyp : ds delete-user <name>");
-                Console.WriteLine("Per te ekzekutuar komanden eport key  shtyp  : ds export-key <public|private><name>[path]");
+                Console.WriteLine("Per te ekzekutuar komanden login shtyp : ds login <name>");
+                Console.WriteLine("Per te ekzekutuar komanden status : ds status <name>");
+                Console.WriteLine(
+                    "Per te ekzekutuar komanden export key  shtyp  : ds export-key <public|private><name>[path]");
                 Console.WriteLine("Per te ekzekutuar komanden import key shtyp  : ds import-key <name><path>");
+                Console.WriteLine(
+                    "Per te ekzekutuar komanden write message key shtyp  : ds write-message <name><message>[token]");
+                Console.WriteLine("Per te ekzekutuar komanden read mesage shtyp  : ds read-message <ciphermessage>");
                 Environment.Exit(1);
             }
+
+
+            if (args[0] != "create-user" && args[0] != "delete-user" && args[0] != "export-key" && args[0] != "import-key" 
+                && args[0] != "write-message" && args[0] != "read-message" && args[0] != "login" && args[0] != "status")
+                Console.WriteLine("Komande e gabuar!");
 
 
             if (args[0] == "create-user")
@@ -32,12 +48,13 @@ namespace ds
                     string password = Console.ReadLine();
                     Console.Write("Perserit fjalekalimin: ");
 
-
+                    if (!Regex.IsMatch(password, "^(?=.{6,}$)(?=.*[a-zA-Z])(?=.*[0-9\\W]).*$"))
+                        throw new Exception(
+                            "Password must be at least 6 characters long, must contain at least a number or symbol and a letter");
                     string perserit_password = Console.ReadLine();
 
                     if (password == perserit_password)
                     {
-                        U.user(user);
                         U.Insert_Pass(user, password);
                     }
                     else
@@ -114,6 +131,7 @@ namespace ds
                     }
                 }
             }
+
             if (args[0] == "import-key")
             {
                 RSACryptoServiceProvider RSA = new RSACryptoServiceProvider(2048);
@@ -151,10 +169,56 @@ namespace ds
                         Console.WriteLine("Celsi " + args[1] + " ekziston paraprakisht!");
                     }
                 }
-
                 catch
                 {
                     Console.WriteLine("Fajlli i dhene nuk eshte qels valid!");
+                }
+            }
+
+            if (args[0] == "write-message")
+            {
+                try
+                {
+                    Console.WriteLine();
+                    switch (args.Length)
+                    {
+                        case 3:
+                            w.EncryptALL(args[1], args[2]);
+                            break;
+                        case 4:
+                            w.EncryptALL(args[1], args[2], args[3]);
+                            break;
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
+
+            if (args[0] == "read-message")
+            {
+                r.DecryptAll(args[1]);
+            }
+
+            if (args[0] == "login")
+            {
+                Console.Write("Shtyp passwordin: ");
+                string password = Console.ReadLine();
+                J.Login(args[1], password);
+            }
+
+            if (args[0] == "status")
+            {
+                bool status = J.status(args[1]);
+
+                if (status)
+                {
+                    Console.WriteLine("Valid: po");
+                }
+                else
+                {
+                    Console.WriteLine("Valid: jo");
                 }
             }
         }
