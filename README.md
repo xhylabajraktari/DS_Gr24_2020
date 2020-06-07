@@ -74,7 +74,12 @@ lëshuar.
 status:
 Ne rast se tokeni ka skaduar ose nese nuk ekziston shfrytezuesi atehere tokeni eshte jo-valid.
 
+write-message:
+Ka te beje me opsionin sender e kjo e fundit deshton nese tokeni nuk eshte valid.
 
+read-message
+Nëse mungon pjesa e dërguesit/nënshkrimit, atëherë komanda e injoron dhe vepron sikur në fazën e
+dytë.
 *****************************************************************************************************
 
 
