@@ -9,9 +9,9 @@ Projekti 1,2,3 ne Sigurine e te dhenave.
 
 Komandat :
 
-tap-code
-rail-fence
-beale
+tap-code , 
+rail-fence , 
+beale , 
 
 
 ****************************************************************************************************
@@ -21,12 +21,12 @@ beale
 
 Komandat :
 
-create-user
-delete-user
-export-key
-import-key
-write-message
-read-message
+create-user , 
+delete-user , 
+export-key , 
+import-key , 
+write-message , 
+read-message 
 
 
 *****************************************************************************************************
@@ -35,11 +35,11 @@ read-message
  
  
 Komandat : 
-create-user
-delete-user
-login
-status
-writw-message
-read-message
+create-user , 
+delete-user , 
+login , 
+status , 
+write-message , 
+read-message 
 
 
