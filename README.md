@@ -32,12 +32,25 @@ read-message
             
 Pershkrimi i komanandave :
 
+create-user:
+Krijon një çift të publik/privat të RSA me emrat <name>.xml dhe <name>.pub.xml brenda
+direktoriumit të çelësave keys.
 
+delete-user:
+I largon të gjithë çelësat ekzistues të shfrytëzuesit.
 
+export-key:
+Eksporton çelësin publik ose privat të shfrytëzuesit nga direktoriumi i çelësave.
 
+import-key:
+Importon çelësin publik ose privat të shfrytëzuesit nga shtegu i dhënë dhe e vendos në direktoriumin
+e çelësave.
 
+write-message:
+E shkruan një mesazh të enkriptuar të dedikuar për një shfrytëzues.
 
-
+read-message:
+E dekripton dhe e shfaq në console mesazhin e enkriptuar.
 
 
 *****************************************************************************************************
