@@ -57,9 +57,22 @@ read-message
 
 Pershkrimi i komandave :
 
+create-user:
+Zgjerimi i komandes create-user ashtu qe gjate krijimit te shfrytezuesit te kerkohet edhe fjalekalimi i 
+jepet permes input-it dhe te jete se paku 6 karaktere dhe kur shfrytezuesi krijohet duhet te ruhet ne bazen 
+e shenimeve
 
+delete-user:
+Kur të thirret kjo komandë do të fshihen edhe të gjitha të dhënat e shfrytëzuesit nga baza e
+shënimeve.
 
+login:
+Teston shfrytezuesin dhe fjalekalimin .Në rast suksesi lëshohet një token i nënshkruar i cili mund të
+përdoret për autentikim të shfrytëzuesit.Tokeni skadon pas 20 minutave. Tokeni mund të përdoret vetëm për shfrytëzuesin për të cilin është
+lëshuar.
 
+status:
+Ne rast se tokeni ka skaduar ose nese nuk ekziston shfrytezuesi atehere tokeni eshte jo-valid.
 
 
 *****************************************************************************************************
